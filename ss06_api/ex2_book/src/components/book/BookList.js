@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import * as listService from "../../services/ListService"
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
+import {deleteBook} from "../../services/ListService";
 
 function BookList(){
     const [listBook,setListBook]=useState([]);
@@ -8,7 +9,6 @@ function BookList(){
     const getAllBook=async ()=>{
         if(listBook){
             let data= await listService.getAll();
-            console.log(data)
             setListBook(data);
         }
     }
@@ -38,9 +38,15 @@ function BookList(){
                 <tbody>
                 {listBook.map((item, index)=>(
                     <tr key={item.id}>
-                        <td>{index}</td>
+                        <td>{index+1}</td>
                         <td>{item.title}</td>
                         <td>{item.quantity}</td>
+                        <td>
+                            <Link className="btn btn-warning" to={`/update/${item.id}`}>Chỉnh sửa</Link>
+                        </td>
+                        <td>
+                            <button  className="btn btn-danger" onClick={() => deleteBook(item)}>Xóa</button>
+                        </td>
                     </tr>
                 ))}
 

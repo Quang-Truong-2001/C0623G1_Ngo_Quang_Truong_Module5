@@ -1,43 +1,49 @@
-import {Formik, Form, Field, ErrorMessage} from "formik";
-import {toast} from "react-toastify";
+import {Field, Form, Formik} from "formik";
+import {useNavigate, useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 import * as listService from "../../services/ListService"
-import {useNavigate} from "react-router-dom";
+import {logDOM} from "@testing-library/react";
 
-
-
-function BookCreate() {
+function BookUpdate() {
     const navigate=useNavigate();
-    const initValue={
-        title:"",
-        quantity: 0
+    let param = useParams();
+    let idBook = param.id;
+
+
+    const [book, setBook] = useState(null)
+    useEffect(() => {
+        findBookById();
+    }, [param]);
+
+    const findBookById = async () => {
+        let data = await listService.findBookById(idBook);
+        console.log(data)
+        setBook(data);
     }
 
-    const createBook = async (values) => {
-        let isSuccess = await listService.saveBook(values);
+    const updateBook = async (values) => {
+        let isSuccess = await listService.updateBook(values,idBook);
         if(isSuccess) {
             navigate("/list")
         }
-
     }
-
     return (
         <>
             <div className='container'>
-                <h1>Create Student</h1>
+                <h1>Update Book</h1>
                 <Formik
-                    initialValues={initValue}
+                    initialValues={book}
                     onSubmit={(values) => {
-                        createBook(values);
+                        updateBook(values)
                     }}
                 >
-
                     <Form>
                         <div className='mb-3'>
                             <label htmlFor='title' className='form-label'>Title</label>
                             <Field type='text' className='form-control' id='title' name="title"/>
                         </div>
                         <div className='mb-3'>
-                            <label htmlFor='quantity' className='form-label'>Age</label>
+                            <label htmlFor='quantity' className='form-label'>Quantity</label>
                             <Field type='number' className='form-control' id='quantity' name="quantity"/>
                         </div>
                         <button type='submit' className='btn btn-primary'>Submit</button>
@@ -48,4 +54,4 @@ function BookCreate() {
     )
 }
 
-export default BookCreate;
+export default BookUpdate;
