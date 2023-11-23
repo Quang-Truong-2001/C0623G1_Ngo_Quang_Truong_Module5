@@ -35,9 +35,9 @@ export const findBookById = async (idBook) =>{
         return undefined;
     }
 }
-export const updateBook = async (book,idBook) => {
+export const updateBook = async (book) => {
     try {
-        await axios.patch(`http://localhost:8080/list/${idBook}`, book)
+        await axios.patch(`http://localhost:8080/list/${book.id}`, book)
         return true;
     }catch (e) {
         return false;

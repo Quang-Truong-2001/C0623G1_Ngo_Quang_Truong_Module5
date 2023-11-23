@@ -1,0 +1,22 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "Nguyen Van A",
+      "email": "a@gmail.com",
+      "website": "vana.com.vn"
+    },
+    {
+      "id": 2,
+      "name": "Nguyen Van B",
+      "email": "a@gmail.com",
+      "website": "vana.com.vn"
+    },
+    {
+      "id": 3,
+      "name": "Nguyen Van C",
+      "email": "a@gmail.com",
+      "website": "vana.com.vn"
+    }
+  ]
+}

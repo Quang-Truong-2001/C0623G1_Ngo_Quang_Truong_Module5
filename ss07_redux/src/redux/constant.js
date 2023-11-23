@@ -1,0 +1,3 @@
+export const GET_ALL_STUDENT = "GET_ALL_STUDENT";
+export const REMOVE_STUDENT = "REMOVE_STUDENT";
+export const ADD_NEW_STUDENT = "ADD_NEW_STUDENT";

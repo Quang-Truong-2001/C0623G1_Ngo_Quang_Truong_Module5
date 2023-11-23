@@ -1,0 +1,65 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "haiTT",
+      "gender": 1,
+      "languages": [
+        "C#"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "TrungDP",
+      "gender": 1,
+      "languages": [
+        "C#",
+        "Java"
+      ]
+    },
+    {
+      "name": "TrungDC",
+      "age": 21,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "Java",
+        "ReactJS"
+      ],
+      "id": 6
+    },
+    {
+      "name": "C07",
+      "age": 1,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 8
+    },
+    {
+      "name": "C0823G1",
+      "age": 20,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 9
+    },
+    {
+      "name": "C0923G1",
+      "age": 2,
+      "gender": 1,
+      "languages": [
+        "C#",
+        "JAVA",
+        "ReactJS"
+      ],
+      "id": 10
+    }
+  ]
+}
