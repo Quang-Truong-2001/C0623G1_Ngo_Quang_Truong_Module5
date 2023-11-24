@@ -1,0 +1,82 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "idProduct": "MHH-0001",
+      "nameProduct": "Cà Chua",
+      "unit": "Kg",
+      "price": 1000,
+      "typeProduct": {
+        "id": 1,
+        "name": "Quả"
+      },
+      "harvestDay": "2023-10-30"
+    },
+    {
+      "id": 2,
+      "idProduct": "MHH-0002",
+      "nameProduct": "Rau Muống",
+      "unit": "Bó",
+      "price": 1000,
+      "typeProduct": {
+        "id": 2,
+        "name": "Rau"
+      },
+      "harvestDay": "2023-09-30"
+    },
+    {
+      "id": 3,
+      "idProduct": "MHH-0003",
+      "nameProduct": "Hoa Cúc",
+      "unit": "Bó",
+      "price": 1000,
+      "typeProduct": {
+        "id": 3,
+        "name": "Hoa"
+      },
+      "harvestDay": "2023-10-30"
+    },
+    {
+      "id": 4,
+      "idProduct": "MHH-0004",
+      "nameProduct": "Khoai",
+      "unit": "kg",
+      "price": 1000,
+      "typeProduct": {
+        "id": 4,
+        "name": "Củ"
+      },
+      "harvestDay": "2023-10-30"
+    },
+    {
+      "idProduct": "MHH-2000",
+      "nameProduct": "Chuối",
+      "unit": "KG",
+      "price": 10000,
+      "typeProduct": {
+        "id": "1",
+        "name": "Quả"
+      },
+      "harvestDay": "2023-10-31",
+      "id": 5
+    }
+  ],
+  "typeProduct": [
+    {
+      "id": 1,
+      "name": "Quả"
+    },
+    {
+      "id": 2,
+      "name": "Rau"
+    },
+    {
+      "id": 3,
+      "name": "Hoa"
+    },
+    {
+      "id": 4,
+      "name": "Củ"
+    }
+  ]
+}
